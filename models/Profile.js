@@ -25,6 +25,7 @@ const ProfileSchema = new Schema({
     type: String,
     required: true
   },
+  //Skills will be a CSV
   skills: {
     type: [String],
     required: true
