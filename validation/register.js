@@ -4,7 +4,7 @@ const isEmpty = require('./is-empty');
 module.exports = function validateRegisterInput(data) {
   let errors = {};
 
-  //Testto check if name field is left blank before assigning value to data.name
+  //Test to check if fields are left blank before assigning values
   data.name = !isEmpty(data.name) ? data.name : '';
   data.email = !isEmpty(data.email) ? data.email : '';
   data.password = !isEmpty(data.password) ? data.password : '';
@@ -21,7 +21,7 @@ module.exports = function validateRegisterInput(data) {
     errors.email = 'Email is required';
   }
   if (!Validator.isEmail(data.email)) {
-    errors.email = 'Email is is invalid';
+    errors.email = 'Email is invalid';
   }
   if (Validator.isEmpty(data.password)) {
     errors.password = 'Password is required';

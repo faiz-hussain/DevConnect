@@ -1,3 +1,5 @@
+//Helper to check for empty fields
+
 const isEmpty = value =>
   value === undefined ||
   value === null ||
