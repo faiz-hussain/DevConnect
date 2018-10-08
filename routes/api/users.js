@@ -19,7 +19,7 @@ const User = require('../../models/User.js');
 
 router.get('/test', (req, res) => res.json({ msg: 'Users Route Works' }));
 
-// Route: GET req to api/users/register
+// Route: POST req to api/users/register
 // Description: Register a new user
 // Access: Public
 
@@ -41,8 +41,8 @@ router.post('/register', (req, res) => {
         //Creates new profile and gravatar with User info
         const avatar = gravatar.url(req.body.email, {
           s: '200', //Size
-          rating: 'pg', //Rating
-          default: 'mm' //Default pic
+          r: 'pg', //Rating
+          d: 'mm' //Default pic
         });
         const newUser = new User({
           name: req.body.name,
