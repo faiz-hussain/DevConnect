@@ -17,6 +17,13 @@ class Register extends Component {
     };
   }
 
+  componentDidMount() {
+    //Check to see if user is logged in
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push('/dashboard');
+    }
+  };
+
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
