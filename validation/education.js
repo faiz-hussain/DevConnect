@@ -9,7 +9,7 @@ module.exports = function validateEducationInput(data) {
   data.degree = !isEmpty(data.degree) ? data.degree : '';
   data.fieldofstudy = !isEmpty(data.fieldofstudy) ? data.fieldofstudy : '';
   data.from = !isEmpty(data.from) ? data.from : '';
-  data.current = !isEmpty(data.current) ? data.current : '';
+  // data.current = !isEmpty(data.current) ? data.current : '';
 
 
   if (Validator.isEmpty(data.school)) {
@@ -24,9 +24,9 @@ module.exports = function validateEducationInput(data) {
   if (Validator.isEmpty(data.from)) {
     errors.from = 'Start date is required';
   }
-  if (Validator.isEmpty(data.current)) {
-    errors.current = 'Please indicate if you are currently in school';
-  }
+  // if (Validator.isEmpty(data.current)) {
+  //   errors.current = 'Please indicate if you are currently in school';
+  // }
 
 
   return {
